@@ -1,3 +1,4 @@
+import random
 from tablero import Tablero
 from usuario import Usuario
 
@@ -41,8 +42,7 @@ def infoUsuario():
 def dimensiones():
     global objTablero
     objTablero = Tablero(jugador)
-    print("=== Especificar tablero ===")
-    print("Por favor, ingrese los siguientes valores")
+    print("=== Generando tablero y posicion inicial ===")
     print("Tablero")
 
     cantidadPremios()
@@ -50,7 +50,7 @@ def dimensiones():
 
 def cantidadPremios():
     try:
-        cantidad = int(input("Premios [1-12] : "))
+        cantidad = random.randint(3, 6)
         if(cantidad > 0 and cantidad < 13):
             objTablero.setPremios(cantidad)
             cantidadParedes()
@@ -58,13 +58,13 @@ def cantidadPremios():
             raise ValueError("Fuera del rango")
 
     except ValueError:
-        print('\nValor incorrecto\n')
+        # print('\nValor incorrecto\n')
         cantidadPremios()
 
 
 def cantidadParedes():
     try:
-        cantidad = int(input("Paredes [1-6] : "))
+        cantidad = random.randint(5, 12)
         if(cantidad > 0 and cantidad < 7):
             objTablero.setParedes(cantidad)
             cantidadFantasmas()
@@ -72,13 +72,13 @@ def cantidadParedes():
             raise ValueError("Fuera del rango")
 
     except ValueError:
-        print('\nValor incorrecto\n')
+        # print('\nValor incorrecto\n')
         cantidadPremios()
 
 
 def cantidadFantasmas():
     try:
-        cantidad = int(input("Fantasmas [1-6] : "))
+        cantidad = random.randint(1, 6)
         if(cantidad > 0 and cantidad < 7):
             objTablero.setFantasmas(cantidad)
             estadoInicial()
@@ -86,7 +86,7 @@ def cantidadFantasmas():
             raise ValueError("Fuera del rango")
 
     except ValueError:
-        print('\nValor incorrecto\n')
+        # print('\nValor incorrecto\n')
         cantidadPremios()
 
 
@@ -97,21 +97,19 @@ def estadoInicial():
 
 
 def posicionInicial():
-    print("Ingrese la posicion Inicial")
-
     try:
-        fil = int(input("Fila: "))
-        col = int(input("Col: "))
+        fil = random.randint(1, 5)
+        col = random.randint(1, 6)
 
         objTablero.posicionInicialPacman(fil-1, col-1)
 
         juego()
 
     except ValueError:
-        print("Valor incorrecto")
+        # print("Valor incorrecto")
         posicionInicial()
     except Exception:
-        print("Posicion invalida")
+        # print("Posicion invalida")
         posicionInicial()
 
 
