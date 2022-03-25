@@ -1,6 +1,6 @@
 # Práctica 3 IPC1
 
-## PY MAN 770C 
+## PY MAN 770C 🐱‍🚀
 
 ## Requisitos
 Python 3.9.7
@@ -13,7 +13,9 @@ py .\pacman.py
 
 ## Controles
 
-W: arriba
-S: Abajo
-A: Izquierda
-D: Derecha
+<p>Manuales [aquí](https://github.com/damianpeaf/IPC1_Practica3_202110568)</p>
+
+<p>W: arriba</p>
+<p>S: Abajo</p>
+<p>A: Izquierda</p>
+<p>D: Derecha</p>
