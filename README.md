@@ -13,7 +13,7 @@ py .\pacman.py
 
 ## Controles
 
-<p>Manuales [aquí](https://github.com/damianpeaf/IPC1_Practica3_202110568)</p>
+Manuales [aquí](https://github.com/damianpeaf/IPC1_Practica3_202110568/tree/main/Manuales)
 
 <p>W: arriba</p>
 <p>S: Abajo</p>
